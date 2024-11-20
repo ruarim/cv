@@ -8,26 +8,21 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
             margin: 0;
             padding: 0;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             background-color: #f4f4f9;
         }
         .container {
-            max-width: 800px;
-            width: 100%;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px;
             background-color: #fff;
         }
         h1, h2, h3 {
-            color: #2f4f4f; /* Dark Slate Grey */
-            margin-bottom: 0px;
+            color: #2f4f4f;
+            margin: 10px 0 5px;
         }
         a {
             color: #0056b3;
@@ -39,45 +34,53 @@
         i {
             font-size: 0.9em;
         }
-        .contact {
-            margin-top: -20px;
-            font-size: 0.9em;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .project, .experience {
+        .contact-icons {
+            margin-top: -10px;
             margin-bottom: 10px;
         }
-        .skills-list, .interests-list {
-            list-style-type: none;
-            padding: 0;
+        .contact-icons a {
+            margin-right: 10px;
+            color: #2f4f4f;
+            font-size: 1.2em;
         }
-        .skills-list li, .interests-list li {
-            margin-bottom: 0px;
+        .section {
+            margin-bottom: 15px;
+        }
+        .project, .experience {
+            margin-bottom: 5px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        ul, ol {
+            margin: 5px 0;
+            padding-left: 15px;
+        }
+        li {
+            margin-bottom: 3px;
         }
     </style>
 </head>
 <body>
     <div class="container">
 
-    <h1>Ruari Molyneux 
-        <a href="mailto:ruari.molyneux@gmail.com"><i class="fas fa-envelope"></i></a> 
+    <h1>Ruari Molyneux</h1>
+    <div class="contact-icons">
+        <a href="mailto:ruari.molyneux@gmail.com"><i class="fas fa-envelope"></i></a>
         <a href="https://github.com/ruarim"><i class="fab fa-github"></i></a>
-    </h1>
+    </div>
 
     <div class="section">
         <h2>Education</h2>
         <h3>Queen Mary University of London</h3>
         <p>Sound and Music Computing MSc - <strong>Distinction</strong> | SEP 2023 - AUG 2024</p>
         <ul>
-            <li><strong>Project:</strong> <em>An Artificial Reverberator Informed by Room Geometry and Visual Appearance</em> | <strong>Grade: 87.3%</strong></li>
-            <li>Innovated a method for creating artificial room reverb using lidar mapping, computer vision and delay-based acoustic simulation techniques.</li>
-            <li><strong>Examiner Feedback:</strong>
-                <ul>
-                    <li><i>"Aimed for publishable, novel, and impactful research—and achieved it."</i> - <a href="https://scholar.google.com/citations?user=fVlS_EgAAAAJ&hl=en">Joshua D Reiss</a></li>
-                    <li><i>"Imaginative engineering at its best—solving a problem almost no one else has tackled."</i> - <a href="https://scholar.google.co.uk/citations?user=W-gexv0AAAAJ&hl=en">Mark Sandler</a></li>
-                </ul>
+            <li>
+                <strong>Project:</strong> <em>An Artificial Reverberator Informed by Room Geometry and Visual Appearance</em> | <strong>Grade: 87.3%</strong><br>
+                Innovated a method for creating artificial room reverb using lidar mapping, computer vision, and delay-based acoustic simulation techniques.
+            </li>
+            <li>
+                <strong>Examiner Feedback:</strong> "Aimed for publishable, novel, and impactful research—and achieved it." - <a href="https://scholar.google.com/citations?user=fVlS_EgAAAAJ&hl=en">Joshua D Reiss</a>; "Imaginative engineering at its best—solving a problem almost no one else has tackled." - <a href="https://scholar.google.co.uk/citations?user=W-gexv0AAAAJ&hl=en">Mark Sandler</a>
             </li>
             <li><strong>Relevant Modules:</strong>
                 <ul>
@@ -131,12 +134,7 @@
         <h2>Projects</h2>
         <div class="project">
             <h3>Beat Tracking <a href="https://github.com/ruarim/beat_tracker"><i class="fab fa-github"></i></a></h3>
-            <ul>
-                <li>Dynamic programming algorithm for computing an estimated sequence of beat times from an audio file.</li>
-                <li>77% accuracy on ~600 file dataset</li>
-                <li>Efficient evaluation of the full dataset in ~2 minutes.</li>
-                <li>Technologies: Python, Numpy, Librosa</li>
-            </ul>
+            <p>Developed a dynamic programming algorithm for beat detection with 77% accuracy on a ~600 file dataset, evaluated in ~2 minutes. <em>Technologies:</em> Python, Numpy, Librosa.</p>
         </div>
         <div class="project">
             <h3>Audio Identification <a href="https://github.com/ruarim/audio_identification"><i class="fab fa-github"></i></a></h3>
