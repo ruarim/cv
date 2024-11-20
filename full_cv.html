@@ -53,8 +53,17 @@
         .section {
             margin-bottom: 15px;
         }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
         .project, .experience {
             margin-bottom: 5px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         p {
             margin: 5px 0;
@@ -79,7 +88,7 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section projects-grid">
         <h2>Education</h2>
         <h3>Queen Mary University of London</h3>
         <p>Sound and Music Computing MSc - <strong>Distinction</strong> | SEP 2023 - AUG 2024</p>
