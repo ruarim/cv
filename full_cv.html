@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruari Molyneux - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact {
+            margin-top: -20px;
+            font-size: 0.9em;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .project, .experience {
+            margin-bottom: 10px;
+        }
+        .skills-list, .interests-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills-list li, .interests-list li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ruari Molyneux</h1>
+    <p class="contact">
+        <a href="mailto:ruari.molyneux@gmail.com">ruari.molyneux@gmail.com</a> | 
+        <a href="https://github.com/ruarim">github.com/ruarim</a>
+    </p>
+
+    <div class="section">
+        <h2>Education</h2>
+        <h3>Queen Mary University of London</h3>
+        <p>Sound and Music Computing MSc - <strong>Distinction</strong> | SEP 2023 - AUG 2024</p>
+        <ul>
+            <li><strong>Project:</strong> <em>An Artificial Reverberator Informed by Room Geometry and Visual Appearance</em> | <strong>Grade: 87.3%</strong></li>
+            <li>Innovated a method for creating artificial room reverb using lidar mapping, computer vision and delay-based acoustic simulation techniques.</li>
+            <li><strong>Examiner Feedback:</strong>
+                <ul>
+                    <li>"Aimed for publishable, novel, and impactful research—and achieved it." - <a href="https://scholar.google.com/citations?user=fVlS_EgAAAAJ&hl=en">Joshua D Reiss</a></li>
+                    <li>"Imaginative engineering at its best—solving a problem almost no one else has tackled." - <a href="https://scholar.google.co.uk/citations?user=W-gexv0AAAAJ&hl=en">Mark Sandler</a></li>
+                </ul>
+            </li>
+            <li><strong>Relevant Modules:</strong>
+                <ul>
+                    <li><strong>Music and Audio Programming | Grade: 98%:</strong> Focus on real-time digital signal processing for audio using the JUCE framework.</li>
+                    <li><strong>Music Informatics:</strong> Analysis of audio signals. Including beat tracking, audio identification, chord/pitch detection and more.</li>
+                    <li><strong>Fundamentals of DSP:</strong> Study of DSP principles, including sampling, quantization, spectrum analysis, and filter design theory and practical application in MATLAB.</li>
+                    <li><strong>Instrument Interaction Design:</strong> Creation of digital musical instruments using methodologies across music, design, engineering, and computing.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Sheffield Hallam University</h3>
+        <p>Computer Science BSc - 2:1 (69.4%) | SEP 2018 - MAY 2021</p>
+    </div>
+
+    <div class="section">
+        <h2>Work Experience</h2>
+        <div class="experience">
+            <h3>Sonic Baume | Software Developer</h3>
+            <p>OCT 2024 - MAR 2024</p>
+            <ul>
+                <li>Designed and implemented a personalized audio SaaS product, integrating large language model analysis.</li>
+                <li>React, Next.Js, Tailwind CSS, AWS, LLMs.</li>
+            </ul>
+        </div>
+        <div class="experience">
+            <h3>Simpleweb | Software Developer</h3>
+            <p>FEB 2022 - JAN 2023</p>
+            <ul>
+                <li>Designed and implemented tools on top of decentralized platforms.</li>
+                <li>Created a Slack-based colleague rewards system with internal tokens.</li>
+                <li>Developed a workspace/desk optimization system for Bath University using carbon usage incentives to address sustainability goals.</li>
+                <li>Engineered full-stack solutions with React, Express JS, Next JS, and Laravel.</li>
+                <li>Actively involved in client meetings for project requirement refinement.</li>
+                <li>Delivered projects using LEAN and AGILE methodologies.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li><strong>Audio Development:</strong> C++, JUCE, DSP, Python, MATLAB</li>
+            <li><strong>Front-end:</strong> React, HTML, Next.js, Typescript, Javascript, CSS</li>
+            <li><strong>Back-end:</strong> Node.js, Express JS, Laravel, MySQL</li>
+            <li><strong>Ops/Other:</strong> GIT, Docker, AWS</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Beat Tracking</h3>
+            <p><a href="https://github.com/ruarim/beat_tracker">GitHub</a></p>
+            <ul>
+                <li>Dynamic programming algorithm for computing an estimated sequence of beat times from an audio file.</li>
+                <li>77% accuracy on ~600 file dataset</li>
+                <li>Efficient evaluation of the full dataset in ~2 minutes.</li>
+                <li>Technologies: Python, Numpy, Librosa</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Audio Identification</h3>
+            <p><a href="https://github.com/ruarim/audio_identification">GitHub</a></p>
+            <ul>
+                <li>Implementation of An Industrial-Strength Audio Search Algorithm (Wang 2003) aka The Shazam Paper.</li>
+                <li>80% accuracy on 200 file dataset.</li>
+                <li>Technologies: Python, Numpy, Librosa</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Schroeder FDN</h3>
+            <p><a href="https://github.com/ruarim/Schroeder_FDN">GitHub</a></p>
+            <ul>
+                <li>Feedback Delay Network and Schroeder all-pass comb filter reverb plug-in.</li>
+                <li>Technologies: C++ and JUCE</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Scattering Delay Network</h3>
+            <p><a href="https://github.com/ruarim/py_sdn">GitHub</a></p>
+            <ul>
+                <li>Implementation of an efficient room acoustic simulation.</li>
+                <li>Technologies: Python, Numpy</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>a_bowl_of_grain</h3>
+            <p><a href="https://github.com/ruarim/a_bowl_of_grain">GitHub</a></p>
+            <ul>
+                <li>A Digital instrument mapping a physical grain of sound to a virtual grain in a Granular Synthesiser.</li>
+                <li>Technologies: MaxMSP, Arduino, Piezo Microphones</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Social Planner</h3>
+            <p><a href="https://github.com/ruarim?tab=repositories&q=pathfinder&type=&language=&sort=">GitHub</a></p>
+            <ul>
+                <li>A web app suggesting routes and venues for evenings out.</li>
+                <li>Technologies: Typescript, PHP, Next.js, Laravel 8, Tailwind CSS, React Map GL, React Query, MySQL</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Depop Refresher</h3>
+            <p><a href="https://github.com/ruarim/auto-pop-monorepo">GitHub</a></p>
+            <ul>
+                <li>A Chrome extension using cron jobs to automating the menial task of refreshing listing on Depop.</li>
+                <li>Technologies: Typescript, React, Chrome Extension API, Nest.js, TypeORM, Turborepo, MySQL</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Glastonbury Set Finder</h3>
+            <p><a href="https://github.com/ruarim/glastonbury-set-finder">GitHub</a></p>
+            <ul>
+                <li>A web app suggesting performances for Glastonbury festival based on Spotify liked tracks.</li>
+                <li>Technologies: Next.js, Tailwind CSS, Spotify API, React Server Components</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Interests</h2>
+        <ul class="interests-list">
+            <li>Music Production, books, graphic design, personal software projects, live music.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
