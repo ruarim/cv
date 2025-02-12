@@ -1,257 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruari Molyneux - CV</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.4;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f9;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 7px;
-            padding-left: 20px;
-            padding-right: 20px;
-            background-color: #fff;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content:center;
-        }
-        h1, h2, h3 {
-            color: #2f4f4f;
-            margin: 10px 0 5px;
-        }
-        a {
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        i {
-            font-size: 0.9em;
-        }
-        .contact-icons {
-            margin-left: 5px;
-            display: flex;
-            align-items: center;
-            justify-content:center;
-        }
-        .contact-icons a {
-            margin-right: 10px;
-            color: #2f4f4f;
-            font-size: 1.5em;
-        }
-        .section {
-            margin-bottom: 15px;
-        }
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        .subject {
-            margin-bottom: 5px;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
-        }
-        .project {
-            margin-bottom: 5px;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease; /* Add transition for smooth animation */
-            text-decoration: none;
-            color: inherit;
-            display: block; 
-        }
-        .project:hover {
-            background-color: #e6e6e6; /* Set the hover background color */
-        }
-        .project:link,
-        .project:visited,
-        .project:hover,
-        .project:active {
-            text-decoration: none; /* Removes underline in all states */
-        }
-        p {
-            margin: 5px 0;
-        }
-        ul, ol {
-            margin: 5px 0;
-            padding-left: 15px;
-        }
-        li {
-            margin-bottom: 3px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruari Molyneux - CV</title>
+  <!-- Google Fonts: Using Roboto for a clean, minimalist look -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      /* border-radius: 6px; */
+      overflow: hidden;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 40px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+    .contact-icons {
+      display: flex;
+      gap: 15px;
+    }
+    .contact-icons a {
+      color: #fff;
+      font-size: 2rem;
+      transition: color 0.3s ease;
+    }
+    .contact-icons a:hover {
+      color: #cbcbcb;
+    }
+    .section {
+      padding: 20px 30px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .section:last-of-type {
+      border-bottom: none;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #000;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: #000;
+      margin-top: 5px;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #333;
+      font-weight: 500;
+    }
+    p {
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    li {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+    /* Card structure for Education and Projects */
+    .card-header {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 1.1rem;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .education-grid,
+    .projects-grid {
+      display: grid;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .education-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    /* Remove default padding from the card containers */
+    .subject,
+    .project {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      padding: 0;
+      transition: transform 0.2s ease;
+    }
+    .subject:hover,
+    .project:hover {
+      transform: translateY(-3px);
+    }
+    .project {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    /* Interests list styling */
+    .interests-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .interests-list li {
+      /* background: #f1f1f1; */
+      padding: 10px;
+      /* border-radius: 4px; */
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .section {
+        padding: 15px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
+  <div class="container">
+    <header>
+      <!-- Stacked header text with a line break -->
+      <h1>Ruari<br>Molyneux</h1>
+      <div class="contact-icons">
+        <a href="mailto:ruari.molyneux@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/ruarim"><i class="fab fa-github"></i></a>
+      </div>
+    </header>
 
-    <div class="header">
-        <h1>Ruari Molyneux</h1>
-        <div class="contact-icons">
-            <a href="mailto:ruari.molyneux@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/ruarim"><i class="fab fa-github"></i></a>
+    <div class="section">
+      <h2>Education</h2>
+      <h3>Queen Mary University of London</h3>
+      <p>Sound and Music Computing MSc - <strong>Distinction</strong> | SEP 2023 - AUG 2024</p>
+      <ul>
+        <div>
+          <strong>Project:</strong> <em>An Artificial Reverberator Informed by Room Geometry and Visual Appearance</em> | <strong>Grade: 87.3%</strong>
+          <ul>
+            <li>Innovated a method for creating artificial room reverb using lidar mapping, computer vision, and delay-based acoustic simulation.</li>
+            <li>Listening tests showed improvement over state-of-the-art models.</li>
+          </ul>
         </div>
+        <div>
+          <strong>Examiner Feedback:</strong>
+          <ul>
+            <li><i>"Aimed for publishable, novel, and impactful research—and achieved it."</i> - <a href="https://scholar.google.com/citations?user=fVlS_EgAAAAJ&hl=en" target="_blank">Joshua D Reiss</a></li>
+            <li><i>"Imaginative engineering at its best—solving a problem almost no one else has tackled."</i> - <a href="https://scholar.google.co.uk/citations?user=W-gexv0AAAAJ&hl=en" target="_blank">Mark Sandler</a></li>
+          </ul>
+        </div>
+        <div><strong>Relevant Modules:</strong></div>
+      </ul>
+      <div class="education-grid">
+        <div class="subject">
+          <div class="card-header">Audio Programming</div>
+          <div class="card-body">
+            <p>Developed real-time audio effects using C++ and the JUCE framework. <br/> <b>Grade: 98%</b></p>
+          </div>
+        </div>
+        <div class="subject">
+          <div class="card-header">Music Informatics</div>
+          <div class="card-body">
+            <p>Explored music signal processing concepts including beat tracking, audio identification, and chord/pitch recognition.</p>
+          </div>
+        </div>
+        <div class="subject">
+          <div class="card-header">Fundamentals of DSP</div>
+          <div class="card-body">
+            <p>Studied DSP theory, including sampling, spectrum analysis, and filter design, with practical applications in MATLAB.</p>
+          </div>
+        </div>
+        <div class="subject">
+          <div class="card-header">Digital Instrument Design</div>
+          <div class="card-body">
+            <p>Designed and prototyped digital musical instruments by merging music, design, and engineering methodologies.</p>
+          </div>
+        </div>
+      </div>
+      <h3>Sheffield Hallam University</h3>
+      <p>Computer Science BSc - 2:1 (69.4%) | SEP 2018 - MAY 2021</p>
     </div>
 
     <div class="section">
-        <h2>Education</h2>
-        <h3>Queen Mary University of London</h3>
-        <p>Sound and Music Computing MSc - <strong>Distinction</strong> | SEP 2023 - AUG 2024</p>
+      <h2>Work Experience</h2>
+      <div class="experience">
+        <h3>Sonic Baume | Software Engineer</h3>
+        <p>OCT 2024 - JUN 2024</p>
         <ul>
-            <li>
-                <strong>Project:</strong> <em>An Artificial Reverberator Informed by Room Geometry and Visual Appearance</em> | <strong>Grade: 87.3%</strong><br>
-                <ul><li>Innovated a method for creating artificial room reverb using lidar mapping, computer vision, and delay-based acoustic simulation.</li></ul>
-                <ul><li>Results of the listening test showed improvment over state of the art models.</li></ul>
-            </li>
-            <li>
-                <strong>Examiner Feedback:</strong>
-                <ul>
-                    <div><i>"Aimed for publishable, novel, and impactful research—and achieved it."</i> - <a href="https://scholar.google.com/citations?user=fVlS_EgAAAAJ&hl=en">Joshua D Reiss</a></div>
-                    <div><i>"Imaginative engineering at its best—solving a problem almost no one else has tackled."</i> - <a href="https://scholar.google.co.uk/citations?user=W-gexv0AAAAJ&hl=en">Mark Sandler</a></div>
-                </ul>
-            </li>
-            <li><strong>Relevant Modules:</strong></li>
+          <li>Collaborated with an Ex-BBC lead research engineer to design and implement a SaaS product for personalized audio production.</li>
+          <li>Researched and developed algorithms integrating Large Language Models to analyse transcripts, music, and sound effects.</li>
+          <li>Partnered with a UX/UI design agency to enhance the user experience.</li>
+          <li>Technologies: Typescript, Next.js, Tailwind CSS, AWS, Generative AI.</li>
         </ul>
-        <div class="education-grid">
-            <div class="subject"><strong>Music and Audio Programming | Grade: 98%</strong> <div>Developed real-time audio effects using C++ and the JUCE framework.</div></div>
-            <div class="subject"><strong>Music Informatics</strong><div>Learned music signal processing principles, including beat tracking, audio identification, chord/pitch recognition and more.</div></div>
-            <div class="subject"><strong>Fundamentals of DSP</strong> <div>Studied DSP theory, including sampling, spectrum analysis, and filter design, with practical application in MATLAB.</div></div>
-            <div class="subject"><strong>Digital Instrument Design</strong> <div>Designed and prototyped digital musical instruments by integrating music, design, and engineering methodologies.</div></div>
-        </div>
-        <h3>Sheffield Hallam University</h3>
-        <p>Computer Science BSc - 2:1 (69.4%) | SEP 2018 - MAY 2021</p>
-    </div>
-
-    <div class="section">
-        <h2>Work Experience</h2>
-        <div class="experience">
-            <h3>Sonic Baume | Software Engineer</h3>
-            <p>OCT 2024 - ARIL 2024</p>
-            <ul>
-                <li>Worked closely with an Ex-BBC lead research engineer to design and implement a SaaS product for personalized audio production.</li>
-                <li>Researched and developmented algorithms leveraging Large Language Models to analyse transcripts, music, and sound effects.</li>
-                <li>Collaborted with a UX/UI design agency to streamline user experience.</li>
-                <li>Typescript, Next.Js, Tailwind CSS, AWS, Generative AI.</li>
-            </ul>
-        </div>
-        <div class="experience">
-            <h3>Simpleweb | Software Developer</h3>
-            <p>FEB 2022 - FEB 2023</p>
-            <ul>
-                <li>Designed and implemented tools on top of decentralized platforms.</li>
-                <li>Created a Slack-based colleague rewards system with internal tokens.</li>
-                <li>Developed a workspace/desk optimization system for Bath University using carbon reduction incentives to address sustainability goals.</li>
-                <li>Engineered full-stack solutions with Next JS, Express JS, and Laravel.</li>
-                <li>Actively involved in client meetings for project requirement refinement.</li>
-                <li>Delivered projects using LEAN and AGILE methodologies.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Skills</h2>
-        <p><strong>Audio Development:</strong> C++, JUCE, DSP, Python, MATLAB</p>
-        <p><strong>Web Development:</strong> React, Next.js, Typescript, Tailwind CSS, Node.js, SQL</p>
-        <p><strong>Ops/Other:</strong> GIT, Docker, AWS</p>
-    </div>
-
-    <h2>Personal Projects</h2>
-    <div class="section projects-grid">
-        <a href="https://github.com/ruarim/geometric_and_visual_artificial_reverberation" class="project">
-            <h3>Geometric and Visual Reverb <i class="fab fa-github"></i></h3>
-            <ul>
-                <li>Synthesising room reverb using geometry mapping, image recogniton and digital signal processing techniques.</li>
-                <li><em>Technologies:</em> Python, MATLAB.</li>
-            </ul>
-        </a>
-        <a href="https://github.com/ruarim/beat_tracker" class="project">
-            <h3>Beat Tracking <i class="fab fa-github"></i></h3>
-            <ul>
-                <li>Efficient Dynamic programming algorithm for beat detection.</li>
-                <li>77% accuracy on a ~600 file dataset, evaluated in ~2 minutes.</li>
-                <li><em>Technologies:</em> Python.</li>
-            </ul>
-        </a>
-        <a href="https://github.com/ruarim/audio_identification" class="project">
-            <h3>Audio Identification <i class="fab fa-github"></i></h3>
-            <ul>
-                <li>Implementation of An Industrial-Strength Audio Search Algorithm (Wang 2003) aka The Shazam Paper.</li>
-                <li>80% accuracy on 200 file dataset.</li>
-                <li><em>Technologies:</em> Python</li>
-            </ul>
-        </a>
-        <a href="https://github.com/ruarim/Schroeder_FDN" class="project">
-            <h3>Schroeder FDN <i class="fab fa-github"></i></h3>
-            <ul>
-                <li>Feedback Delay Network and Schroeder all-pass comb filter reverb plug-in.</li>
-                <li><em>Technologies:</em> C++, JUCE</li>
-            </ul>
-        </a>
-        <a href="https://github.com/ruarim/py_sdn" class="project">
-            <h3>Scattering Delay Network <i class="fab fa-github"></i></h3>
-            <ul>
-                <li>Implementation of an efficient room acoustic simulation.</li>
-                <li><em>Technologies:</em> Python</li>
-            </ul>
-        </a>
-        <a href="https://github.com/ruarim/a_bowl_of_grain" class="project">
-            <h3>a_bowl_of_grain <i class="fab fa-github"></i></h3>
-            <ul>
-                <li>A novel Digital musical instrument mapping a physical grain of sound to a virtual grain in a Granular Synthesiser.</li>
-                <li><em>Technologies:</em> MaxMSP, Arduino</li>
-            </ul>
-        </a>
-        <a href="https://github.com/ruarim?tab=repositories&q=pathfinder&type=&language=&sort=" class="project">
-            <h3>Social Planner <i class="fab fa-github"></i></h3>
-            <ul>
-                <li>A web app suggesting routes and venues for evenings out.</li>
-                <li><em>Technologies:</em> Typescript, PHP, Next.js, Laravel 8, Tailwind CSS, MySQL</li>
-            </ul>
-        </a>
-        <a href="https://github.com/ruarim/auto-pop-monorepo" class="project">
-            <h3>Depop Refresher <i class="fab fa-github"></i></h3>
-            <ul>
-                <li>A Chrome extension using cron jobs to automating the menial task of refreshing listing on Depop.</li>
-                <li><em>Technologies:</em> Typescript, React, Nest.js, MySQL</li>
-            </ul>
-        </a>
-        <a href="https://github.com/ruarim/glastonbury-set-finder" class="project">
-            <h3>Glastonbury Set Finder <i class="fab fa-github"></i></h3>
-            <ul>
-                <li>A web app suggesting performances for Glastonbury festival based on Spotify liked tracks.</li>
-                <li><em>Technologies:</em> Next.js, Tailwind CSS, Spotify API</li>
-            </ul>
-        </a>
-    </div>
-
-    <div class="section">
-        <h2>Interests</h2>
-        <ul class="interests-list">
-            <li>Music Production, books, graphic design, personal software projects, live music.</li>
+      </div>
+      <div class="experience">
+        <h3>Simpleweb | Software Engineer</h3>
+        <p>FEB 2022 - FEB 2023</p>
+        <ul>
+          <li>Designed and implemented tools on decentralized platforms.</li>
+          <li>Created a Slack-based colleague rewards system with internal tokens.</li>
+          <li>Developed a workspace/desk optimization system for Bath University using carbon reduction incentives.</li>
+          <li>Engineered full-stack solutions using Next.js, Express.js, and Laravel.</li>
+          <li>Participated in client meetings to refine project requirements.</li>
+          <li>Delivered projects using LEAN and AGILE methodologies.</li>
         </ul>
+      </div>
     </div>
 
+    <div class="section">
+      <h2>Skills</h2>
+      <p><strong>Audio Development:</strong> C++, JUCE, DSP, Python, MATLAB</p>
+      <p><strong>Web Development:</strong> React, Next.js, Typescript, Tailwind CSS, Node.js, SQL</p>
+      <p><strong>Ops/Other:</strong> GIT, Docker, AWS</p>
     </div>
+
+    <div class="section">
+      <h2>Personal Projects</h2>
+      <div class="projects-grid">
+        <a href="https://github.com/ruarim/geometric_and_visual_artificial_reverberation" class="project" target="_blank">
+          <div class="card-header">Geometric and Visual Reverb <i class="fab fa-github"></i></div>
+          <div class="card-body">
+            <ul>
+              <li>Synthesizing room reverb using geometry mapping, image recognition, and DSP techniques.</li>
+              <li><em>Technologies:</em> Python, MATLAB.</li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://github.com/ruarim/beat_tracker" class="project" target="_blank">
+          <div class="card-header">Beat Tracking <i class="fab fa-github"></i></div>
+          <div class="card-body">
+            <ul>
+              <li>Dynamic programming algorithm for efficient beat detection.</li>
+              <li>77% accuracy on a ~600 file dataset, evaluated in ~2 minutes.</li>
+              <li><em>Technologies:</em> Python.</li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://github.com/ruarim/audio_identification" class="project" target="_blank">
+          <div class="card-header">Audio Identification <i class="fab fa-github"></i></div>
+          <div class="card-body">
+            <ul>
+              <li>Implementation of an industrial-strength audio search algorithm (Wang 2003), also known as The Shazam Paper.</li>
+              <li>80% accuracy on a 200 file dataset.</li>
+              <li><em>Technologies:</em> Python.</li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://github.com/ruarim/Schroeder_FDN" class="project" target="_blank">
+          <div class="card-header">Schroeder FDN <i class="fab fa-github"></i></div>
+          <div class="card-body">
+            <ul>
+              <li>Feedback Delay Network and Schroeder all-pass comb filter reverb plug-in.</li>
+              <li><em>Technologies:</em> C++, JUCE.</li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://github.com/ruarim/py_sdn" class="project" target="_blank">
+          <div class="card-header">Scattering Delay Network <i class="fab fa-github"></i></div>
+          <div class="card-body">
+            <ul>
+              <li>Efficient room acoustic simulation implementation.</li>
+              <li><em>Technologies:</em> Python.</li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://github.com/ruarim/a_bowl_of_grain" class="project" target="_blank">
+          <div class="card-header">a_bowl_of_grain <i class="fab fa-github"></i></div>
+          <div class="card-body">
+            <ul>
+              <li>A digital musical instrument mapping a physical grain of sound to a virtual grain in a granular synthesiser.</li>
+              <li><em>Technologies:</em> MaxMSP, Arduino.</li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://github.com/ruarim?tab=repositories&q=pathfinder&type=&language=&sort=" class="project" target="_blank">
+          <div class="card-header">Social Planner <i class="fab fa-github"></i></div>
+          <div class="card-body">
+            <ul>
+              <li>A web app suggesting routes and venues for evenings out.</li>
+              <li><em>Technologies:</em> Typescript, PHP, Next.js, Laravel 8, Tailwind CSS, MySQL.</li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://github.com/ruarim/auto-pop-monorepo" class="project" target="_blank">
+          <div class="card-header">Depop Refresher <i class="fab fa-github"></i></div>
+          <div class="card-body">
+            <ul>
+              <li>A Chrome extension automating the task of refreshing Depop listings.</li>
+              <li><em>Technologies:</em> Typescript, React, Nest.js, MySQL.</li>
+            </ul>
+          </div>
+        </a>
+        <a href="https://github.com/ruarim/glastonbury-set-finder" class="project" target="_blank">
+          <div class="card-header">Glastonbury Set Finder <i class="fab fa-github"></i></div>
+          <div class="card-body">
+            <ul>
+              <li>A web app suggesting festival performances based on Spotify liked tracks.</li>
+              <li><em>Technologies:</em> Next.js, Tailwind CSS, Spotify API.</li>
+            </ul>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Interests</h2>
+      <ul class="interests-list">
+        <li>Music Production, Books, Graphic Design, Personal Software Projects, Live Music</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
