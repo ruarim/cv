@@ -125,7 +125,6 @@
     .projects-grid {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    /* Remove default padding from the card containers */
     .subject,
     .project {
       background: #fff;
@@ -142,7 +141,6 @@
       color: inherit;
       display: block;
     }
-    /* Interests list styling */
     .interests-list {
       list-style: none;
       padding-left: 0;
@@ -171,18 +169,20 @@
   <div class="container">
     <header>
       <!-- Stacked header text with a line break -->
-      <div style="padding-bottom: 0px;">
-        <h1 style="padding-bottom: 12px;">Ruari Molyneux</h1>
+      <div style="padding-top: 7px; padding-bottom: 5px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px;">
+          <h1>Ruari Molyneux</h1>
+          <div class="contact-icons">
+            <a href="mailto:ruari.molyneux@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/ruarim"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
       <div style="color:#c0c0c0">
         <em>
           Audio Scientist and Software Engineer with an MSc (Distinction) in Sound and Music Computing, 
           research published at AES and professional experience in audio AI SaaS. Eager to apply research and engineering expertise to cutting-edge audio technology.
         </em>
       </div>
-      </div>
-      <div class="contact-icons">
-        <a href="mailto:ruari.molyneux@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/ruarim"><i class="fab fa-github"></i></a>
       </div>
     </header>
 
@@ -244,7 +244,7 @@
         <p>OCT 2024 - JUN 2025</p>
         <ul>
           <li>Worked with an ex-BBC lead audio research engineer to design and implement a SaaS product for personalised media production.</li>
-          <li>Researched and developed AI-based pipelines for extracting features from transcripts, music, and sound effects.</li>
+          <li>Researched and developed AI-based features extraction pipelines for transcripts, music, and sound effects.</li>
           <li>Developed an LLM-driven system that automates hours of audio/video editing tasks into seconds.</li>
           <li>Collaborated with a UX/UI design agency to assess and refine wireframes, resulting in a more intuitive user experience.</li>
           <li>Involved in all stages of development, from initial idea to product launch.</li>
